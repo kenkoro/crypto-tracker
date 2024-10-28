@@ -8,7 +8,16 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalContext
+import com.kenkoro.cryptoTracker.core.locals.Arrangement
+import com.kenkoro.cryptoTracker.core.locals.FontSize
+import com.kenkoro.cryptoTracker.core.locals.LocalArrangement
+import com.kenkoro.cryptoTracker.core.locals.LocalFontSize
+import com.kenkoro.cryptoTracker.core.locals.LocalPadding
+import com.kenkoro.cryptoTracker.core.locals.LocalSize
+import com.kenkoro.cryptoTracker.core.locals.Padding
+import com.kenkoro.cryptoTracker.core.locals.Size
 
 private val lightScheme =
   lightColorScheme(
@@ -261,9 +270,16 @@ fun CryptoTrackerTheme(
       else -> highContrastLightColorScheme
     }
 
-  MaterialTheme(
-    colorScheme = colorScheme,
-    typography = Typography,
-    content = content,
-  )
+  CompositionLocalProvider(
+    LocalPadding provides Padding(),
+    LocalArrangement provides Arrangement(),
+    LocalSize provides Size(),
+    LocalFontSize provides FontSize(),
+  ) {
+    MaterialTheme(
+      colorScheme = colorScheme,
+      typography = Typography,
+      content = content,
+    )
+  }
 }

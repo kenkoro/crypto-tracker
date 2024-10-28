@@ -1,0 +1,11 @@
+package com.kenkoro.cryptoTracker.core.locals
+
+import androidx.compose.runtime.compositionLocalOf
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
+
+data class Size(
+  val coinListItemIcon: Dp = 85.dp,
+)
+
+val LocalSize = compositionLocalOf { Size() }
