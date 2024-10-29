@@ -6,6 +6,7 @@ import androidx.compose.ui.unit.dp
 
 data class Padding(
   val coinListItem: Dp = 16.dp,
+  val priceChange: Dp = 4.dp,
 )
 
 val LocalPadding = compositionLocalOf { Padding() }

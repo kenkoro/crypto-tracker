@@ -6,6 +6,7 @@ import androidx.compose.ui.unit.dp
 
 data class Arrangement(
   val coinListItem: Dp = 16.dp,
+  val coinListScreenLazyColumn: Dp = 8.dp,
 )
 
 val LocalArrangement = compositionLocalOf { Arrangement() }
