@@ -10,14 +10,14 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalContext
-import com.kenkoro.cryptoTracker.core.locals.Arrangement
-import com.kenkoro.cryptoTracker.core.locals.FontSize
-import com.kenkoro.cryptoTracker.core.locals.LocalArrangement
-import com.kenkoro.cryptoTracker.core.locals.LocalFontSize
-import com.kenkoro.cryptoTracker.core.locals.LocalPadding
-import com.kenkoro.cryptoTracker.core.locals.LocalSize
-import com.kenkoro.cryptoTracker.core.locals.Padding
-import com.kenkoro.cryptoTracker.core.locals.Size
+import com.kenkoro.cryptoTracker.core.presentation.local.Arrangement
+import com.kenkoro.cryptoTracker.core.presentation.local.FontSize
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalArrangement
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalFontSize
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalPadding
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalSize
+import com.kenkoro.cryptoTracker.core.presentation.local.Padding
+import com.kenkoro.cryptoTracker.core.presentation.local.Size
 
 private val lightScheme =
   lightColorScheme(

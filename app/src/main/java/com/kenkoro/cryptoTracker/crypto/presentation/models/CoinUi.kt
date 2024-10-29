@@ -2,8 +2,8 @@ package com.kenkoro.cryptoTracker.crypto.presentation.models
 
 import android.icu.text.NumberFormat
 import androidx.annotation.DrawableRes
+import com.kenkoro.cryptoTracker.core.presentation.util.getDrawableIdForCoin
 import com.kenkoro.cryptoTracker.crypto.domain.Coin
-import com.kenkoro.cryptoTracker.util.getDrawableIdForCoin
 import java.util.Locale
 
 data class CoinUi(

@@ -22,10 +22,10 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
-import com.kenkoro.cryptoTracker.core.locals.LocalArrangement
-import com.kenkoro.cryptoTracker.core.locals.LocalFontSize
-import com.kenkoro.cryptoTracker.core.locals.LocalPadding
-import com.kenkoro.cryptoTracker.core.locals.LocalSize
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalArrangement
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalFontSize
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalPadding
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalSize
 import com.kenkoro.cryptoTracker.crypto.domain.Coin
 import com.kenkoro.cryptoTracker.crypto.presentation.models.CoinUi
 import com.kenkoro.cryptoTracker.crypto.presentation.models.toCoinUi

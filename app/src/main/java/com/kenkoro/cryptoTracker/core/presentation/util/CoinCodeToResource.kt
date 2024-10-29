@@ -1,4 +1,4 @@
-package com.kenkoro.cryptoTracker.util
+package com.kenkoro.cryptoTracker.core.presentation.util
 
 import com.kenkoro.cryptoTracker.R
 

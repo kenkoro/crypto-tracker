@@ -19,9 +19,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import com.kenkoro.cryptoTracker.core.locals.LocalFontSize
-import com.kenkoro.cryptoTracker.core.locals.LocalPadding
-import com.kenkoro.cryptoTracker.core.locals.LocalSize
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalFontSize
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalPadding
+import com.kenkoro.cryptoTracker.core.presentation.local.LocalSize
 import com.kenkoro.cryptoTracker.crypto.presentation.models.DisplayableNumber
 import com.kenkoro.cryptoTracker.ui.theme.CryptoTrackerTheme
 import com.kenkoro.cryptoTracker.ui.theme.greenBackground

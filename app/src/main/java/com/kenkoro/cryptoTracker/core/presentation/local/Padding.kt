@@ -1,4 +1,4 @@
-package com.kenkoro.cryptoTracker.core.locals
+package com.kenkoro.cryptoTracker.core.presentation.local
 
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.unit.Dp
