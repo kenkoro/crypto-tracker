@@ -9,7 +9,7 @@ so there's no need to recompose out Ui frequently.
  */
 @Immutable
 data class CoinListState(
-  val isLoading: Boolean,
+  val isLoading: Boolean = false,
   val coins: List<CoinUi> = emptyList(),
   val selectedCoin: CoinUi? = null,
 )
