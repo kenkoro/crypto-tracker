@@ -1,4 +1,4 @@
-package com.kenkoro.cryptoTracker.crypto.presentation.coinList.composables
+package com.kenkoro.cryptoTracker.crypto.presentation.coinList.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

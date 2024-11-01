@@ -15,15 +15,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import com.kenkoro.cryptoTracker.core.presentation.local.LocalArrangement
-import com.kenkoro.cryptoTracker.core.presentation.util.toString
-import com.kenkoro.cryptoTracker.crypto.presentation.coinList.composables.CoinListItem
-import com.kenkoro.cryptoTracker.crypto.presentation.coinList.composables.previewCoin
+import com.kenkoro.cryptoTracker.crypto.presentation.coinList.components.CoinListItem
+import com.kenkoro.cryptoTracker.crypto.presentation.coinList.components.previewCoin
 import com.kenkoro.cryptoTracker.ui.theme.CryptoTrackerTheme
 
 @Composable
 fun CoinListScreen(
   modifier: Modifier = Modifier,
   state: CoinListState,
+  onAction: (CoinListAction) -> Unit,
 ) {
   val arrangement = LocalArrangement.current
 
@@ -39,7 +39,7 @@ fun CoinListScreen(
       items(state.coins) { coinUi ->
         CoinListItem(
           coinUi = coinUi,
-          onClick = {},
+          onClick = { onAction(CoinListAction.OnCoinClick(coinUi)) },
           modifier = Modifier.fillMaxWidth(),
         )
         HorizontalDivider()
@@ -54,6 +54,7 @@ private fun CoinListScreenPrev() {
   CryptoTrackerTheme {
     CoinListScreen(
       state = previewCoinListState,
+      onAction = {},
       modifier = Modifier.background(MaterialTheme.colorScheme.background),
     )
   }

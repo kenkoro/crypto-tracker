@@ -1,4 +1,4 @@
-package com.kenkoro.cryptoTracker.crypto.presentation.coinList.composables
+package com.kenkoro.cryptoTracker.crypto.presentation.coinList.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -114,5 +114,5 @@ internal val previewCoin =
     symbol = "BTC",
     marketCapUsd = 1231242132.75,
     priceUsd = 62234.2345233,
-    changePercent24Hr = -0.1,
+    changePercent24Hr = 0.15,
   ).toCoinUi()

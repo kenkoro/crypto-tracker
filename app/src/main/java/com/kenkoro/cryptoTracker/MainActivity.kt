@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.kenkoro.cryptoTracker.core.presentation.util.ObserveAsEvents
 import com.kenkoro.cryptoTracker.core.presentation.util.toString
+import com.kenkoro.cryptoTracker.crypto.presentation.coinDetail.CoinDetailScreen
 import com.kenkoro.cryptoTracker.crypto.presentation.coinList.CoinListEvent
 import com.kenkoro.cryptoTracker.crypto.presentation.coinList.CoinListScreen
 import com.kenkoro.cryptoTracker.crypto.presentation.coinList.CoinListViewModel
@@ -39,7 +40,19 @@ class MainActivity : ComponentActivity() {
               }
             }
           }
-          CoinListScreen(state = state, modifier = Modifier.padding(innerPadding))
+          when {
+            state.selectedCoin != null -> {
+              CoinDetailScreen(state = state, modifier = Modifier.padding(innerPadding))
+            }
+
+            else -> {
+              CoinListScreen(
+                state = state,
+                onAction = viewModel::onAction,
+                modifier = Modifier.padding(innerPadding),
+              )
+            }
+          }
         }
       }
     }
