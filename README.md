@@ -67,7 +67,7 @@ fun Double.toDisplayableNumber(): DisplayableNumber {
 ```
 
 ### New Result class
-Result utility class with a concrete set of errors, and error massages.
+Result utility class with a concrete set of errors, and error messages.
 
 #### P.s.: `Error` is a plain marker interface just for you
 ```kotlin
