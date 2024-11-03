@@ -12,6 +12,8 @@ data class FontSize(
   val coinDetailScreenName: TextUnit = 40.sp,
   val coinDetailScreenSymbol: TextUnit = 20.sp,
   val infoCardTitle: TextUnit = 12.sp,
+  val lineChartDateTimeLabel: TextUnit = 14.sp,
+  val noCoinIsSelected: TextUnit = 24.sp,
 )
 
 val LocalFontSize = compositionLocalOf { FontSize() }

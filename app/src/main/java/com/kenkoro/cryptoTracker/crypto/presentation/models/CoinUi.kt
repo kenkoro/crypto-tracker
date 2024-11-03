@@ -4,6 +4,7 @@ import android.icu.text.NumberFormat
 import androidx.annotation.DrawableRes
 import com.kenkoro.cryptoTracker.core.presentation.util.getDrawableIdForCoin
 import com.kenkoro.cryptoTracker.crypto.domain.Coin
+import com.kenkoro.cryptoTracker.crypto.presentation.coinDetail.DataPoint
 import java.util.Locale
 
 data class CoinUi(
@@ -15,6 +16,7 @@ data class CoinUi(
   val priceUsd: DisplayableNumber,
   val changePercent24Hr: DisplayableNumber,
   @DrawableRes val iconRes: Int,
+  val coinPriceHistory: List<DataPoint> = emptyList(),
 )
 
 data class DisplayableNumber(
