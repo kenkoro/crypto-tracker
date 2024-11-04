@@ -80,12 +80,12 @@ sealed interface Result<out D, out E : Error> {
 }
 ```
 
-Here, we use `out` to mark `D`, and `E` as covarient type parameters - we can omit them later by using
-`Nothing`, since `Nothing` is a supertype of all types in Kotlin. E.g. our `out E` can accept all 
-implementations of `Error`, and also **out of** `E`. This allows us to write something like:
+Here, we use `out` to mark `D`, and `E` as [covarient type parameters][varience] - meaning, if we have `SubD : D` and `SubE : E`,
+then `Result<SubD, SubE>` is a subtype of `Result<D, E>`, where the hierarchy of `E` looks like `Error -> E -> SubE`. **Notice** that `Nothing` is a subtype of all types in Kotlin.
+This allows us to write something like:
 
 ```kotlin
-suspend inline fun <reified T> networkCall(response: HttpResponse): Result<T, NetworkError> {
+suspend inline fun <reified T> responseToResult(response: HttpResponse): Result<T, NetworkError> {
   return when (response.status.value) {
     in 200..299 -> {
       try {
@@ -107,3 +107,4 @@ app shouldn't be heavily dependent on other codebases, because if the 3rd party 
 
 
 [string-resource-wo-context]: https://youtu.be/mB1Lej0aDus?si=yzYd-7Ndp3Jjy-Ie
+[varience]: https://en.m.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)
